@@ -1,0 +1,8 @@
+@font-face {
+    font-family: custom;
+    src: url(../../assets/fonts/try.ttf);
+}
+
+*{
+    font-family: custom;
+}

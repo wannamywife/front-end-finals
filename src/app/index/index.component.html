@@ -1,0 +1,151 @@
+<nav class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">TaskMate</a>
+      <div class="hidden md:flex space-x-4">
+        <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">Home</a>
+        <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">About</a>
+        <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">Services</a>
+        <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">Contact</a>
+      </div>
+      <div class="hidden md:flex space-x-4">
+        <a href="/login" class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md transition">Login</a>
+      </div>
+      <button class="md:hidden flex items-center text-white" ng-click="navToggle = !navToggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <div class="md:hidden" ng-class="{'hidden': !navToggle}">
+      <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">Home</a>
+      <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">About</a>
+      <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">Services</a>
+      <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">Contact</a>
+      <a href="#" class="block px-4 py-2 bg-white text-blue-600 hover:bg-gray-100">Login</a>
+    </div>
+  </nav>
+
+  <header class="bg-amber-200 text-white py-20">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold mb-4">Welcome to TaskMate</h1>
+      <p class="text-lg mb-6">Your Ultimate Task Management App</p>
+      <a href="#" class="bg-white text-indigo-600 px-6 py-3 rounded font-semibold">Get Started</a>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Task Management</h3>
+          <p>Organize your tasks effectively with our easy-to-use task management tools. Prioritize, set deadlines, and track progress.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Collaboration</h3>
+          <p>Work together with your team in real-time. Assign tasks, share updates, and communicate seamlessly within TaskMate.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Notifications</h3>
+          <p>Stay on top of your tasks with timely notifications and reminders, ensuring you never miss a deadline.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Analytics</h3>
+          <p>Gain insights into your productivity with detailed analytics and reports, helping you to optimize your workflow.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Customization</h3>
+          <p>Tailor TaskMate to your needs with customizable workflows, themes, and settings. Make it truly your own.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Mobile Access</h3>
+          <p>Access your tasks on the go with our mobile app, ensuring you stay productive wherever you are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Pricing</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Free Plan</h3>
+          <p class="text-2xl font-bold mb-4">$0/month</p>
+          <ul class="mb-4">
+            <li>Basic Task Management</li>
+            <li>5 Projects</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#" class="bg-indigo-600 text-white px-6 py-3 rounded font-semibold">Sign Up</a>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Pro Plan</h3>
+          <p class="text-2xl font-bold mb-4">$9.99/month</p>
+          <ul class="mb-4">
+            <li>Advanced Task Management</li>
+            <li>Unlimited Projects</li>
+            <li>Priority Support</li>
+            <li>Analytics and Reports</li>
+          </ul>
+          <a href="#" class="bg-indigo-600 text-white px-6 py-3 rounded font-semibold">Sign Up</a>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-4">Enterprise Plan</h3>
+          <p class="text-2xl font-bold mb-4">Contact Us</p>
+          <ul class="mb-4">
+            <li>Custom Solutions</li>
+            <li>Dedicated Account Manager</li>
+            <li>Custom Integrations</li>
+            <li>24/7 Support</li>
+          </ul>
+          <a href="#" class="bg-indigo-600 text-white px-6 py-3 rounded font-semibold">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">About Us</h2>
+      <p class="mb-8">TaskMate is a leading task management app designed to help individuals and teams stay organized and productive. Our mission is to provide intuitive and powerful tools that simplify task management and enhance collaboration. With TaskMate, you can focus on what matters most and achieve your goals with ease.</p>
+      <img src="team.jpg" alt="Our Team" class="mx-auto rounded shadow-lg">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+      <p class="mb-8">Have questions or need assistance? Reach out to our support team, and we'll be happy to help.</p>
+      <form class="max-w-lg mx-auto bg-white p-6 rounded shadow">
+        <div class="mb-4">
+          <label for="name" class="block text-left font-semibold">Name</label>
+          <input type="text" id="name" class="w-full px-4 py-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-left font-semibold">Email</label>
+          <input type="email" id="email" class="w-full px-4 py-2 border rounded">
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block text-left font-semibold">Message</label>
+          <textarea id="message" class="w-full px-4 py-2 border rounded" rows="4"></textarea>
+        </div>
+        <button type="submit" class="bg-indigo-600 text-white px-6 py-3 rounded font-semibold">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 TaskMate. All rights reserved.</p>
+      <div class="mt-4">
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 mx-2">Privacy Policy</a>
+        <a href="#" class="text-indigo-600 hover:text-indigo-800 mx-2">Terms of Service</a>
+      </div>
+    </div>
+  </footer>

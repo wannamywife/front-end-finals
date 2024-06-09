@@ -1,0 +1,71 @@
+<nav class="bg-blue-600 text-white p-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold">TaskMate</a>
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">Home</a>
+      <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">About</a>
+      <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">Services</a>
+      <a href="#" class="hover:bg-blue-700 px-3 py-2 rounded-md">Contact</a>
+    </div>
+    <div class="hidden md:flex space-x-4">
+      <a href="#" class="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-md transition">Logout</a>
+    </div>
+    <button class="md:hidden flex items-center text-white" ng-click="navToggle = !navToggle">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="md:hidden" ng-class="{'hidden': !navToggle}">
+    <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">Home</a>
+    <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">About</a>
+    <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">Services</a>
+    <a href="#" class="block px-4 py-2 text-white hover:bg-blue-700">Contact</a>
+    <a href="#" class="block px-4 py-2 bg-white text-blue-600 hover:bg-gray-100">Login</a>
+  </div>
+</nav>
+<div class="min-h-screen bg-gradient-to-br from-yellow-700 to-blue-900 flex items-center justify-center p-4">
+  <div class="bg-white p-6 rounded-3xl shadow-2xl w-full max-w-lg border border-gray-200">
+    <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Task Manager</h2>
+    <p class="font-bold text-black" >Username: {{ username }}</p> 
+    
+    <div class="mb-6">
+      <label for="todoItem" class="block text-md font-medium text-gray-700 mb-2">New Task</label>
+      <input type="text" name="todoItem" id="todoItem" class="w-full border border-gray-300 rounded-md py-2 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400" placeholder="Enter task" [formControl]="itemName"/>
+    </div>
+
+    <div class="mb-6">
+      <label for="user" class="block text-md font-medium text-gray-700 mb-2">Added By</label>
+      <p class="font-bold text-black" >{{ username }}</p> 
+    </div>
+
+    <div class="text-center mb-6">
+      <button class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md transition transform hover:scale-105" (click)="pushItemToList()">Add Task</button>
+    </div>
+
+    <div class="flex justify-between mb-6">
+      <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-2 px-4 rounded-md transition transform hover:scale-105" (click)="updateUser()">Update User</button>
+      <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-md transition transform hover:scale-105" (click)="deleteUser()">Delete User</button>
+    </div>
+
+    <div class="overflow-x-auto">
+      <table class="w-full bg-white text-gray-700 rounded-md shadow-md">
+        <thead class="bg-gray-200 text-gray-600 uppercase text-sm">
+          <tr>
+            <th class="py-3 px-4 text-left">Item Name</th>
+            <th class="py-3 px-4 text-left">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of todoList" class="border-b last:border-0">
+            <td class="py-3 px-4">{{ item.itemName }}</td>
+            <td class="py-3 px-4">
+              <button class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-1 px-3 rounded-md transition transform hover:scale-105 mr-2" (click)="updateItem(item)">Update</button>
+              <button class="bg-red-500 hover:bg-red-600 text-white font-semibold py-1 px-3 rounded-md transition transform hover:scale-105" (click)="deleteItem(item.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
